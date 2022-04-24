@@ -17,7 +17,8 @@ module.exports = class SQL {
         mariadb.createConnection({
             socketPath: '/var/run/mysqld/mysqld.sock', 
             user:'wpuser',
-            password: 'password'
+            password: 'password',
+            connectTimeout:10000
         })
         .then(conn => {
         
