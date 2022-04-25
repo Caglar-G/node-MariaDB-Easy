@@ -2,7 +2,6 @@
 var c1 = new HATA("sql_sorgu");
 
 
-const VERI_TABANI = "VetAdmin";
 
   
 
@@ -46,7 +45,7 @@ module.exports = class SQL {
 
     /*
     var animals = await SQL.SQLSorgulaASYNC(`
-      SELECT _animal.*
+      SELECT _userConAnimal.*,_animal.*
       FROM _userConAnimal
       JOIN _animal ON _animal._id_animal=_userConAnimal.animal_id
       WHERE _userConAnimal.user_id=${req.user.id}`);
