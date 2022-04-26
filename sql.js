@@ -141,6 +141,7 @@ module.exports = class SQL {
         else{
             await this.connectionDb.query("USE "+VERI_TABANI);
         }
+
         
         var KeysArray = [];
         var ValuesArray = [];
