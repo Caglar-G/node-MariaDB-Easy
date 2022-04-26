@@ -132,9 +132,17 @@ module.exports = class SQL {
     
 
 
-    async SQLSorgulaASYNC_INSERT(INTO,data)
+    async SQLSorgulaASYNC_INSERT(INTO,data,veritaban=null)
     {
-        await this.connectionDb.query("USE "+VERI_TABANI);
+        if(veritaban != null)
+        {
+            await this.connectionDb.query("USE "+veritaban);
+        }
+        else{
+            await this.connectionDb.query("USE "+VERI_TABANI);
+        }
+
+        
         var KeysArray = [];
         var ValuesArray = [];
         for ( var property in data ) {
