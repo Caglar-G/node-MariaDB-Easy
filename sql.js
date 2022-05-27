@@ -13,6 +13,7 @@ module.exports = class SQL {
         this.connectionDb = null;
         var $this = this;
 
+        console.log("Bağlanmayı deniyor");
         mariadb.createConnection({
             socketPath: '/var/run/mysqld/mysqld.sock', 
             user:'wpuser',
@@ -22,6 +23,7 @@ module.exports = class SQL {
         .then(conn => {
         
             $this.connectionDb = conn;
+            console.log("Bağlantı kuruldu");
             c1.log("connected ! connection id is " + conn.threadId);
             c1.log("Sql Kuruldu");
             callbackOK();
