@@ -3,6 +3,8 @@ var c1 = new HATA("sql_sorgu");
 
 
 
+
+
   
 
 module.exports = class SQL {
