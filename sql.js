@@ -1,7 +1,7 @@
 
 var c1 = new HATA("sql_sorgu");
 
-
+//test
 
 
 
